@@ -11,12 +11,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 
 public class LoggerTest {
-    private static final Logger logger=LoggerFactory.getLogger(LoggerTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoggerTest.class);
+
     @Test
-    public void test1(){
-        String name="qiancong";
-        String password="cc";
-        logger.info("name: {},password:{}",name,password);
+    public void test1() {
+        String name = "qiancong";
+        String password = "cc";
+        logger.info("name: {},password:{}", name, password);
         logger.debug("debug...");
         logger.info("info...");
         logger.error("error...");

@@ -12,6 +12,7 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private ProductCategoryRepository repository;
+
     @Override
     public ProductCategory findOne(Integer categoryId) {
         return repository.findById(categoryId).get();
