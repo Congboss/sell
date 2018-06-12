@@ -3,9 +3,9 @@ package com.qiancong.sell.enums;
 import lombok.Getter;
 
 @Getter
-public enum ProductStatusEnum {
-    UP(1,"下架"),
-    DOWN(0,"在架")
+public enum ProductStatusEnum{
+    UP(0, "在架"),
+    DOWN(1, "下架")
     ;
 
     private Integer code;

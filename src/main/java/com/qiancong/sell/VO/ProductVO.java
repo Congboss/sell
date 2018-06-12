@@ -1,6 +1,7 @@
 package com.qiancong.sell.VO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.qiancong.sell.dataobject.ProductInfo;
 import lombok.Data;
 
 import java.util.List;
@@ -13,4 +14,5 @@ public class ProductVO {
     private Integer categoryType;
     @JsonProperty("foods")
     private List<ProductInfoVO> productInfoVOList;
+
 }

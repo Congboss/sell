@@ -20,7 +20,7 @@ public class ProductSeviceImpl implements ProductService {
 
     @Override
     public List<ProductInfo> findUpAll() {
-        return repository.findByProductStatus(ProductStatusEnum.DOWN.getCode());
+        return repository.findByProductStatus(ProductStatusEnum.UP.getCode());
     }
 
     @Override
