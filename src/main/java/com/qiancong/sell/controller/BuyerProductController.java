@@ -7,6 +7,7 @@ import com.qiancong.sell.dataobject.ProductCategory;
 import com.qiancong.sell.dataobject.ProductInfo;
 import com.qiancong.sell.service.CategoryService;
 import com.qiancong.sell.service.ProductService;
+import com.qiancong.sell.utils.ResultVOUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,11 +60,7 @@ public class BuyerProductController {
         productVO.setProductInfoVOList(productInfoVOList);
         productVOList.add(productVO);
     }
-   ResultVO resultVO=new ResultVO();
+    return  ResultVOUtil.success(productVOList);
 
-   resultVO.setData(productVOList);
-    resultVO.setCode(0);
-    resultVO.setMessage("成功");
-return resultVO;
 }
 }
