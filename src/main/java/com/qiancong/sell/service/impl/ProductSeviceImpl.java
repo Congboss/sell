@@ -14,6 +14,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+    /**
+    * @Description:
+    * @Param:
+    * @return:
+    * @Author: Cong.Qian
+    * @Date: 2018/6/13
+    */
 @Service
 public class ProductSeviceImpl implements ProductService {
     @Autowired
