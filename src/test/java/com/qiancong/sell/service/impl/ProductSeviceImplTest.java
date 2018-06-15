@@ -31,7 +31,7 @@ private ProductSeviceImpl productSevice;
     @Test
     public void findUpAll() {
         List<ProductInfo> productInfoList=productSevice.findUpAll();
-        Assert.assertNotNull(productInfoList);
+        Assert.assertNotEquals(0, productInfoList.size());
     }
 
     @Test
