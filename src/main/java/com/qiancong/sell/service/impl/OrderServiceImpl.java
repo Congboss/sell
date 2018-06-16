@@ -94,7 +94,7 @@ throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
         }
 
         List<OrderDetail> orderDetailList=repository.findByOrderId(orderId);
-        if(orderDetailList==null){
+        if(CollectionUtils.isEmpty(orderDetailList)){
             throw new SellException(ResultEnum.ORDERDETAIL_NOT_EXIST);
         }
 OrderDTO orderDTO=new OrderDTO();
@@ -114,7 +114,7 @@ OrderDTO orderDTO=new OrderDTO();
 
        return new PageImpl<>(orderDTOList,pageable,orderMasterPage.getTotalElements());
     }
-
+//取消订单
     @Override
     @Transactional
     public OrderDTO cancel(OrderDTO orderDTO) {
@@ -189,4 +189,16 @@ if(result==null){
 }
         return orderDTO;
     }
+
+//查询所有订单
+    @Override
+    public Page<OrderDTO> findList(Pageable pageable) {
+      Page<OrderMaster> orderMasterPage=  orderMasterRepository.findAll(pageable);
+        List<OrderDTO> orderDTOList= OrderMaster2OrderDTOConverter
+                .convert(orderMasterPage.getContent());
+
+        return new PageImpl<>(orderDTOList,pageable,orderMasterPage.getTotalElements());
+    }
+
+
 }

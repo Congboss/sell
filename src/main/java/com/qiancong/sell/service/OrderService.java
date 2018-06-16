@@ -23,4 +23,6 @@ OrderDTO cancel(OrderDTO orderDTO);
 OrderDTO finish(OrderDTO orderDTO);
     //支付订单
     OrderDTO paid(OrderDTO orderDTO);
+    //查询所有订单列表
+    Page<OrderDTO> findList(Pageable pageable);
 }
