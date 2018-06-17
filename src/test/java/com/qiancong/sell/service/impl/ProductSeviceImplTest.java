@@ -56,4 +56,16 @@ private ProductSeviceImpl productSevice;
         ProductInfo result=productSevice.save(productInfo);
         Assert.assertNotNull(result);
     }
+
+    @Test
+    public void onSale(){
+        ProductInfo productInfo=productSevice.onSale("123456");
+        Assert.assertEquals(ProductStatusEnum.UP,productInfo.getProductStatusEnum());
+    }
+
+    @Test
+    public void offSale(){
+        ProductInfo productInfo=productSevice.offSale("123456");
+        Assert.assertEquals(ProductStatusEnum.DOWN,productInfo.getProductStatusEnum());
+    }
 }

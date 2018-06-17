@@ -12,7 +12,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
     /**
     * @Description:
@@ -23,8 +22,38 @@ import java.util.List;
     */
 @Service
 public class ProductSeviceImpl implements ProductService {
-    @Autowired
-    private ProductInfoRepository repository;
+        @Autowired
+        private ProductInfoRepository repository;
+        @Override
+        public ProductInfo onSale(String productId) {
+            ProductInfo productInfo=repository.findById(productId).get();
+            if(productInfo==null){
+                throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+            }
+            if(productInfo.getProductStatus()==ProductStatusEnum.UP.getCode()){
+                throw new SellException(ResultEnum.PRODUCT_STATUS_ERROR);
+            }
+            //更新
+            productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
+            return repository.save(productInfo);
+        }
+
+        @Override
+        public ProductInfo offSale(String productId) {
+
+                ProductInfo productInfo=repository.findById(productId).get();
+                if(productInfo==null){
+                    throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+                }
+                if(productInfo.getProductStatus()==ProductStatusEnum.DOWN.getCode()){
+                    throw new SellException(ResultEnum.PRODUCT_STATUS_ERROR);
+                }
+                //更新
+                productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
+                return repository.save(productInfo);
+        }
+
+
     @Override
     public ProductInfo findOne(String productId) {
         return repository.findById(productId).get();
