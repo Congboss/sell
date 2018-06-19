@@ -1,6 +1,7 @@
 package com.qiancong.sell.exception;
 
 import com.qiancong.sell.enums.ResultEnum;
+import lombok.Data;
 
 /**
  * @program: sell
@@ -8,6 +9,7 @@ import com.qiancong.sell.enums.ResultEnum;
  * @author: Cong.Qian
  * @create: 2018-06-13 17:05
  **/
+@Data
 public class SellException extends RuntimeException{
     private Integer code;
 

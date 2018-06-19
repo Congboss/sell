@@ -1,6 +1,7 @@
 package com.qiancong.sell.utils;
 
 import com.qiancong.sell.VO.ResultVO;
+import lombok.Data;
 
 /**
  * @program: sell
@@ -8,6 +9,7 @@ import com.qiancong.sell.VO.ResultVO;
  * @author: Cong.Qian
  * @create: 2018-06-13 10:25
  **/
+
 public class ResultVOUtil {
     public static ResultVO success(Object object){
         ResultVO resultVO=new ResultVO();
