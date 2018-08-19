@@ -1,6 +1,6 @@
 package com.qiancong.sell.service;
 
-import com.qiancong.sell.dataobject.ProductCategory;
+import com.qiancong.sell.entity.ProductCategory;
 
 import java.util.List;
 

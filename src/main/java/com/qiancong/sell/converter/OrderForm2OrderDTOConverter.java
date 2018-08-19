@@ -2,7 +2,7 @@ package com.qiancong.sell.converter;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.qiancong.sell.dataobject.OrderDetail;
+import com.qiancong.sell.entity.OrderDetail;
 import com.qiancong.sell.dto.OrderDTO;
 import com.qiancong.sell.enums.ResultEnum;
 import com.qiancong.sell.exception.SellException;

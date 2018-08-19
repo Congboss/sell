@@ -1,6 +1,6 @@
 package com.qiancong.sell.converter;
 
-import com.qiancong.sell.dataobject.OrderMaster;
+import com.qiancong.sell.entity.OrderMaster;
 import com.qiancong.sell.dto.OrderDTO;
 import org.springframework.beans.BeanUtils;
 

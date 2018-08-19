@@ -1,7 +1,7 @@
 package com.qiancong.sell.controller;
 
-import com.qiancong.sell.dataobject.ProductCategory;
-import com.qiancong.sell.dataobject.ProductInfo;
+import com.qiancong.sell.entity.ProductCategory;
+import com.qiancong.sell.entity.ProductInfo;
 import com.qiancong.sell.exception.SellException;
 import com.qiancong.sell.form.ProductForm;
 import com.qiancong.sell.service.CategoryService;

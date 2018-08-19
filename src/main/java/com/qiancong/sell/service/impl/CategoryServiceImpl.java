@@ -1,7 +1,7 @@
 package com.qiancong.sell.service.impl;
 
-import com.qiancong.sell.dao.ProductCategoryRepository;
-import com.qiancong.sell.dataobject.ProductCategory;
+import com.qiancong.sell.mapper.ProductCategoryRepository;
+import com.qiancong.sell.entity.ProductCategory;
 import com.qiancong.sell.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

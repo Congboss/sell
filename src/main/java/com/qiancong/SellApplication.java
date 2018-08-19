@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.qiancong.sell.dataobject.mapper")
+@MapperScan(basePackages = "com.qiancong.sell.mapper")
 public class SellApplication {
 
     public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package com.qiancong.sell.dao;
 
-import com.qiancong.sell.dataobject.ProductCategory;
+import com.qiancong.sell.entity.ProductCategory;
+import com.qiancong.sell.mapper.ProductCategoryRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class ProductCategoryRepositoryTest {
     @Autowired
     private ProductCategoryRepository productCategoryRepository;
@@ -25,23 +28,24 @@ public class ProductCategoryRepositoryTest {
     }
 
     @Test
-    @Transactional
     public void saveTest() {
-        ProductCategory productCategory = new ProductCategory("男生最爱", 5);
-        ProductCategory result = productCategoryRepository.save(productCategory);
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setCategoryType(29);
+        productCategory.setCategoryName("奶茶");
+       ProductCategory result=productCategoryRepository.save(productCategory);
         Assert.assertNotEquals(null, result);
     }
 
     @Test
     public void updateTest() {
-        ProductCategory productCategory = productCategoryRepository.findById(2).get();
+        ProductCategory productCategory = productCategoryRepository.findById(6).get();
         productCategory.setCategoryType(23);
         productCategoryRepository.save(productCategory);
     }
 
     @Test
     public void findByCategoryTypeInTest() {
-        List<Integer> list = Arrays.asList(2, 3, 4);
+        List<Integer> list = Arrays.asList(5, 23, 18);
         List<ProductCategory> result = productCategoryRepository.findByCategoryTypeIn(list);
         Assert.assertNotEquals(0, result.size());
 

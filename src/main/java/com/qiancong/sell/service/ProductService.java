@@ -1,6 +1,6 @@
 package com.qiancong.sell.service;
 
-import com.qiancong.sell.dataobject.ProductInfo;
+import com.qiancong.sell.entity.ProductInfo;
 import com.qiancong.sell.dto.CartDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

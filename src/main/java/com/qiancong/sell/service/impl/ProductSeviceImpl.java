@@ -1,7 +1,7 @@
 package com.qiancong.sell.service.impl;
 
-import com.qiancong.sell.dao.ProductInfoRepository;
-import com.qiancong.sell.dataobject.ProductInfo;
+import com.qiancong.sell.mapper.ProductInfoRepository;
+import com.qiancong.sell.entity.ProductInfo;
 import com.qiancong.sell.dto.CartDTO;
 import com.qiancong.sell.enums.ProductStatusEnum;
 import com.qiancong.sell.enums.ResultEnum;

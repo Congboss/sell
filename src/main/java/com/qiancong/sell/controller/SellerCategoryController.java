@@ -1,6 +1,6 @@
 package com.qiancong.sell.controller;
 
-import com.qiancong.sell.dataobject.ProductCategory;
+import com.qiancong.sell.entity.ProductCategory;
 import com.qiancong.sell.exception.SellException;
 import com.qiancong.sell.form.CategoryForm;
 import com.qiancong.sell.service.CategoryService;
@@ -22,7 +22,7 @@ import java.util.Map;
  * @create: 2018-06-17 18:02
  **/
 @Controller
-@RequestMapping("/seller/category")
+@RequestMapping("l")
 public class SellerCategoryController {
     @Autowired
     private CategoryService categoryService;

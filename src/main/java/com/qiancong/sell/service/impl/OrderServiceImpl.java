@@ -1,11 +1,11 @@
 package com.qiancong.sell.service.impl;
 
 import com.qiancong.sell.converter.OrderMaster2OrderDTOConverter;
-import com.qiancong.sell.dao.OrderDetailRepository;
-import com.qiancong.sell.dao.OrderMasterRepository;
-import com.qiancong.sell.dataobject.OrderDetail;
-import com.qiancong.sell.dataobject.OrderMaster;
-import com.qiancong.sell.dataobject.ProductInfo;
+import com.qiancong.sell.mapper.OrderDetailRepository;
+import com.qiancong.sell.mapper.OrderMasterRepository;
+import com.qiancong.sell.entity.OrderDetail;
+import com.qiancong.sell.entity.OrderMaster;
+import com.qiancong.sell.entity.ProductInfo;
 import com.qiancong.sell.dto.CartDTO;
 import com.qiancong.sell.dto.OrderDTO;
 import com.qiancong.sell.enums.OrderStatusEnum;
@@ -28,7 +28,6 @@ import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

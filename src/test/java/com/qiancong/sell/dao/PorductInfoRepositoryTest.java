@@ -1,6 +1,7 @@
 package com.qiancong.sell.dao;
 
-import com.qiancong.sell.dataobject.ProductInfo;
+import com.qiancong.sell.entity.ProductInfo;
+import com.qiancong.sell.mapper.ProductInfoRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

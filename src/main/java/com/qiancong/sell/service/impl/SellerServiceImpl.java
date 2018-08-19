@@ -1,7 +1,7 @@
 package com.qiancong.sell.service.impl;
 
-import com.qiancong.sell.dao.SellerInfoRepository;
-import com.qiancong.sell.dataobject.SellerInfo;
+import com.qiancong.sell.mapper.SellerInfoMapper;
+import com.qiancong.sell.entity.SellerInfo;
 import com.qiancong.sell.service.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,9 +15,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class SellerServiceImpl implements SellerService {
     @Autowired
-    SellerInfoRepository repository;
+    SellerInfoMapper mapper;
     @Override
     public SellerInfo findSellerInfoByOpenid(String openid) {
-        return repository.findByOpenid(openid);
+        return mapper.findSellerInfoByOpenid(openid);
     }
 }

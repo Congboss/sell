@@ -1,18 +1,15 @@
 package com.qiancong.sell.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.qiancong.sell.dataobject.OrderDetail;
+import com.qiancong.sell.entity.OrderDetail;
 import com.qiancong.sell.enums.OrderStatusEnum;
 import com.qiancong.sell.enums.PayStatusEnum;
 import com.qiancong.sell.utils.EnumUtil;
 import com.qiancong.sell.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 
-import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

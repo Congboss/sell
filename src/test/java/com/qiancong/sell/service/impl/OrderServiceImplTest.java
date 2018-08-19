@@ -1,6 +1,6 @@
 package com.qiancong.sell.service.impl;
 
-import com.qiancong.sell.dataobject.OrderDetail;
+import com.qiancong.sell.entity.OrderDetail;
 import com.qiancong.sell.dto.OrderDTO;
 import com.qiancong.sell.enums.OrderStatusEnum;
 import com.qiancong.sell.enums.PayStatusEnum;
@@ -15,11 +15,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
