@@ -9,4 +9,6 @@ public interface SellerInfoMapper {
     public void insertSeller(SellerInfo sellerInfo);
     @Select("select * from sellerInfo where open_id=#{openId}")
     public SellerInfo findSellerInfoByOpenid(String openId);
+    @Select("select password from sellerInfo where user_name=#{username}")
+    public String getPasswordByuserName(String username);
 }

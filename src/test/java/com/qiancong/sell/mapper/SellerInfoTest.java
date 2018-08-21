@@ -26,4 +26,8 @@ private SellerInfoMapper mapper;
     public void findSellerByOpenId(){
         log.info(mapper.findSellerInfoByOpenid("we").getPassword());
     }
+    @Test
+    public void getPasswordByUserName(){
+        log.info(mapper.getPasswordByuserName("werr"));
+    }
 }

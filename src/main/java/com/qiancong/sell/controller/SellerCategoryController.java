@@ -22,7 +22,7 @@ import java.util.Map;
  * @create: 2018-06-17 18:02
  **/
 @Controller
-@RequestMapping("l")
+@RequestMapping("seller/category")
 public class SellerCategoryController {
     @Autowired
     private CategoryService categoryService;
