@@ -23,7 +23,8 @@ import javax.servlet.http.HttpSession;
 public class LoginAspect {
     @Autowired
     HttpSession session;
-    @Pointcut("execution(public * com.qiancong.sell.controller.*.*(..))&&!execution(public * com.qiancong.sell.controller.LoginController.*(..))")
+    @Pointcut("execution(public * com.qiancong.sell.controller.*.*(..))&&!execution(public * com.qiancong.sell.controller.LoginController.*(..))" +
+            "&&!execution(public * com.qiancong.sell.controller.SeckillController.*(..))")
     public void loginAuth(){};
 
     @Around("loginAuth()")
