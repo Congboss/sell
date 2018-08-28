@@ -2,6 +2,8 @@ package com.qiancong.sell.VO;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 /*http请求返回的
         最外层对象*/
